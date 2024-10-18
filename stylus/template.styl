@@ -1,0 +1,123 @@
+
+// Colors
+color               = #ffce00
+color_2             = #ffce00
+black               = #111
+dark                = #141822
+gray                = #777
+light               = #e0e1e8
+lighter             = #f0f1f6
+red                 = #D00
+yellow              = #FFC
+
+// Social colors
+color_facebook      = #3b5998
+color_twitter       = #00aced
+color_googleplus    = #dd4b39
+color_youtube       = #bb0000
+color_linkedin      = #007bb6
+color_instagram     = #517fa4
+color_pinterest     = #cb2027
+color_foursquare    = #0072b1
+color_whatsapp      = #4dc247
+color_blogger       = #ea7d08
+color_vimeo         = #409dcf
+color_flickr        = #0063DC
+color_tripadvisor   = #589442
+
+// Global
+global_bg           = white
+global_color        = dark
+global_size         = 14px
+global_size_sm      = 12px
+global_size_xs      = 10px
+global_lh           = 20px
+global_sep          = 20px
+
+// Layout
+sep                 = 20px
+limit               = 1240px
+limit_2             = 1000px
+limit_3             = 800px
+
+// Fonts
+font                = 'Roboto', sans-serif
+font_2              = 'Khand', sans-serif
+
+// CSS vars
+shadow              = 1px 1px 0px rgba(0,0,0,.4)
+shadow_2            = 0 0 10px rgba(0,0,0,.1)
+border              = 1px solid light
+rad                 = 5px
+rad_2               = 2px
+tn                  = .2s ease
+
+
+// Header
+
+header_height       = 90px
+header_background   = black
+header_color        = white
+
+// Titles 
+
+title_base          = 20px
+title_aument        = 10px
+title_lineheight    = 1
+title_uppercase     = true
+title_bold          = false
+title_bold          = true
+
+// Buttons
+
+button_padding      = 6px 20px
+button_padding_a    = 2px 5px
+button_size         = global_size - 2
+button_lineheight   = global_lh
+button_radius       = 0
+button_uppercase    = true
+button_letterspacing= 4px
+
+
+
+// Default cubic bezier
+cb                  = cubic-bezier(0.77, 0, 0.175, 1)
+
+
+// Bootstrap grid vars
+
+$break              = 240px
+
+$screen-sm          = $break * 2
+$screen-md          = $break * 3
+$screen-lg          = $break * 4
+
+$break-sm           = "(min-width $screen-sm-min)"
+$break-md           = "(min-width $screen-md-min)"
+$break-lg           = "(min-width $screen-lg-min)"
+$break-limit        = "(min-width " + limit + ")"
+
+$grid-gutter-width  = sep
+
+$bower-path         = "../../bower_components"
+
+// Proportional titles
+
+title_h1            = title_base + (title_aument*5)
+title_h2            = title_base + (title_aument*3)
+title_h3            = title_base + (title_aument*1)
+title_h4            = title_base + (title_aument*0)
+title_h5            = title_base - ceil(title_aument*.5)
+
+title_h1_lh         = ceil( title_h1 * title_lineheight )
+title_h2_lh         = ceil( title_h2 * title_lineheight )
+title_h3_lh         = ceil( title_h3 * title_lineheight )
+title_h4_lh         = ceil( title_h4 * title_lineheight )
+title_h5_lh         = ceil( title_h5 * title_lineheight )
+
+
+@import 'main'
+
+
+
+

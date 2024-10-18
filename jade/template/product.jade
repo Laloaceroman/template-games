@@ -1,0 +1,72 @@
+
+extends ../template.jade
+
+block page
+
+	.page
+		.page-body
+
+			section.section-product
+				.section-limit
+
+					.product
+						.cols.cols-gutterx2
+							.col-md-6
+
+								.product-slider.slider
+									.slide
+										.bg(data-bg="uploads/product1.jpg")
+									.slide
+										.bg(data-bg="uploads/product2.jpg")
+									.slide.slide-dark
+										.bg(data-youtube="BzMLA8YIgG0",data-youtube-auto)
+
+							.col-md-6
+
+								.product-info
+
+									h1.h2.product-title: +lorem(4)
+									
+									.product-content.content
+										p: +lorem(20)
+										p: +lorem(10)
+
+									.product-price
+										.product-price-new $2.000
+										.product-price-old $3.000
+
+									a(href="cart.html").button.button-md.button-color
+										span.fa.fa-shopping-cart
+										|  Agregar al carro
+
+
+			section.section-products.section-light
+				.section-limit
+					.section-content.center
+						h2 Productos similares
+					.cols
+						+loop(2)
+							- nnnn = 0
+							+loop(6)
+								- nnnn = nnnn + 1
+								.col-sm-6.col-md-4.col-lg-3
+
+									article.article-product(data-cart-product)
+
+										.article-image
+											a.bg(href="#")
+												+uploads("product"+nnnn+".jpg")
+
+										.article-body
+											h3.h4.article-title: a(href="product.html"): +lorem(4)
+											p.article-description: +lorem(6)
+
+											.article-price
+												.article-price-new $2.000
+												.article-price-old $3.000
+
+											.article-button
+												a(href="cart.html").button.button-lighter
+													span.fa.fa-shopping-cart
+													|  Agregar al carro
+

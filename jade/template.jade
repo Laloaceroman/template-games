@@ -1,0 +1,134 @@
+
+- BRAND             = "Technogames 2017"
+
+- SHARE_TITLE       = BRAND+": Feria expositora de Videojuegos y Tecnología"
+- SHARE_IMAGE       = ""
+- SHARE_DESCRIPTION = "Feria expositora de Videojuegos y Tecnología"
+
+- RAND = Math.floor(Math.random()*100000)
+
+block vars
+
+include mixins
+include mixins_articles
+include mixins_sections
+
+doctype html
+
+<!--[if IE 8]>
+<html lang="es" class="lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="es">
+<!--<![endif]-->
+
+
+head
+	
+	title=SHARE_TITLE
+
+	meta(charset='UTF-8')
+	meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+	meta(name='description', content=SHARE_DESCRIPTION)
+
+	// Meta tags facebook
+	meta(property='og:title', content=SHARE_TITLE)
+	meta(property='og:description', content=SHARE_DESCRIPTION)
+	meta(property='og:image', content=SHARE_IMAGE)
+
+	// Meta tags twitter cards
+	meta(name='twitter:card', content="summary_large_image")
+	meta(name='twitter:title', content=SHARE_TITLE)
+	meta(name='twitter:description', content=SHARE_DESCRIPTION)
+	meta(name='twitter:image', content=SHARE_IMAGE)
+
+	// Style
+	link(href='css/template.css', rel='stylesheet', type='text/css', id='templatecss')
+	link(href='//fonts.googleapis.com/css?family=Roboto:300,400,700|Khand:300,400,700', rel='stylesheet', type='text/css')
+	link(href='img/favicon.png', rel='shortcut icon')
+
+	// Scripts
+	script(src='js/main.js')
+
+	//[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]
+
+
+body
+
+	header
+		.header-limit
+
+			.header-social
+				a.header-social-facebook(href="#"): span.fa.fa-facebook
+				a.header-social-twitter(href="#"): span.fa.fa-twitter
+				a.header-social-instagram(href="#"): span.fa.fa-instagram
+
+			
+			.header-nav
+				nav
+					ul
+						li: a(href="index.html") Inicio
+						li: a(href="expositors.html") Expositores
+						li: a(href="stores.html") Tiendas
+						li: a(href="gallery.html") Galeria
+						li: a(href="faq.html") Faq
+						li: a(href="contact.html") Contacto
+
+			.header-hamburger
+				span.fa.fa-bars
+
+			.header-center
+				.header-logo
+					a(href="index.html")
+						+img("logo.png")
+
+
+	#body
+		block page
+
+
+
+
+
+	// Section map
+
+	section.section-map.section-black
+
+		.section-limit
+			.section-map-box
+				.section-map-logo
+					a(href="index.html")
+						+img("logo-big.png")
+				.section-map-text Sábado 05 de Mayo 2017 / 11:00 a 21:00 hrs. Inacap Valparaíso.
+				.section-map-social
+					a.social-facebook(href="#"): span.fa.fa-facebook
+					a.social-twitter(href="#"): span.fa.fa-twitter
+					a.social-instagram(href="#"): span.fa.fa-instagram
+
+		.section-map.map(data-zoom='12', data-lat='-33.0326091', data-lng='-71.5896207')
+			.map-marker(data-lat='-33.0326091', data-lng='-71.5896207')
+
+
+
+	// Section logos
+
+	section.section-logos.section-black
+		.limit.inner.inner-2
+			//h3 Nos apoyan grandes marcas
+			a(href="#"): +img("logo-inacap.png")
+			a(href="#"): +img("logo-biobio.png")
+			a(href="#"): +img("logo-elmercurio.png")
+			a(href="#"): +img("logo-rockaxis.png")
+			a(href="#"): +img("logo-oregon.png")
+
+	footer
+		.limit.inner 
+			| Technogames 2017
+			a(href="http://www.oregonproducciones.cl/",target="_blank") Oregon producciones
+			a(href="http://growthy.cl",target="_blank") Desarrollo web por Growthy
+
+
+
+
+
+</html>

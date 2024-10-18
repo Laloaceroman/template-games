@@ -1,0 +1,91 @@
+
+extends ../template.jade
+
+block page
+
+
+	.page
+
+		.page-header
+			.page-header-limit
+				h1 Expositores
+				p.subtitle: +lorem(20)
+
+		.page-body
+
+			section.section-logos
+				.limi.inner.inner-2
+					a(href="#"): +img("logo-msi.png")
+					a(href="#"): +img("logo-microplay.png")
+					a(href="#"): +img("logo-corsair.png")
+
+
+			section.section-items.section-dark.section-center
+				.cols.cols-gutterx0
+					.col-md-6
+						.section-group
+							.bg(data-bg="uploads/"+Math.floor(Math.random()*9)+".jpg")
+							.section-limit
+								.section-content-va-md
+					.col-md-6
+						.section-limit
+							.section-content-va-md
+								.section-content
+									h2.section-title MSI
+									p.section-subtitle: +lorem(20)
+									.section-description.content
+										p: +lorem(40)
+
+
+			section.section-items.section-center
+				.cols.cols-gutterx0
+					.col-md-6.col-md-push-6
+						.section-group
+							.bg(data-bg="uploads/"+Math.floor(Math.random()*9)+".jpg")
+							.section-limit
+								.section-content-va-md
+					.col-md-6.col-md-pull-6
+						.section-limit
+							.section-content-va-md
+								.section-content
+									h2.section-title Microplay
+									p.section-subtitle: +lorem(20)
+									.section-description.content
+										p: +lorem(40)
+
+
+
+			section.section-items.section-color.section-center
+				.cols.cols-gutterx0
+					.col-md-6
+						.section-group
+							.bg(data-bg="uploads/"+Math.floor(Math.random()*9)+".jpg")
+							.section-limit
+								.section-content-va-md
+					.col-md-6
+						.section-limit
+							.section-content-va-md
+								.section-content
+									h2.section-title CORSAIR
+									p.section-subtitle: +lorem(20)
+									.section-description.content
+										p: +lorem(40)
+
+
+
+			//section.section-items.section-dark.section-center
+				.cols.cols-gutterx0
+					.col-md-6
+						.section-group
+							.section-bg.bg(data-bg="uploads/"+Math.floor(Math.random()*9)+".jpg")
+							.section-limit
+								.section-content-va-md
+									+sectionContent(true,false,false,'line-white button-cover')
+					.col-md-6
+						.section-group
+							.section-bg.bg(data-bg="uploads/"+Math.floor(Math.random()*9)+".jpg")
+							.section-limit
+								.section-content-va-md
+									+sectionContent(true,false,false,'line-white button-cover')
+
+

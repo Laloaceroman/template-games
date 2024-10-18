@@ -1,0 +1,65 @@
+
+
+.youtube
+	position relative
+	clip-path polygon(20% 0%, 100% 0%, 100% 70%,80% 100%, 0% 100%, 0% 30%)
+	//@media $break-md
+	overflow hidden
+	z-index 1
+	img
+		width 100%
+
+	.youtube-play
+		circle 60px, 2px
+		centre 60px, 60px
+		border 2px solid color
+		color color
+		transition .2s ease
+		.fa
+			margin-left 2px
+	
+	&:hover
+		cursor pointer
+		.youtube-play
+			background color
+			color black
+			transform scale(1.2)
+
+	&.youtube-playing
+		.youtube-play
+			transform scale(.8)
+			opacity 0
+
+	&.youtube-out
+		.youtube-iframe
+			animation fadeOut .5s ease both
+
+
+
+.youtube-iframe
+	cover absolute
+	animation fadeIn .5s ease backwards
+	background black
+	iframe
+		cover absolute
+		animation fadeIn 1s 1s ease backwards
+
+	&.youtube-iframe-api
+		display none
+		&.youtube-iframe-ready
+			display block
+
+	.youtube-iframe-close
+		position absolute
+		top 10px
+		right 10px
+		circle 30px
+		background rgba(0,0,0,.5)
+		color white
+		z-index 2
+		&:hover
+			background color
+
+
+
+

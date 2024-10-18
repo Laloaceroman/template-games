@@ -1,0 +1,58 @@
+
+@keyframes clippath
+	0%
+		clip-path polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%)
+	50%
+		clip-path polygon(0% 0%, 100% 0%, 100% 85%, 50% 95%, 0% 85%)
+
+.section-main
+	padding-top header_height
+	margin-top header_height * -1
+	overflow hidden
+	clip-path polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%)
+	animation clippath 4s ease-in-out infinite
+	padding-bottom 40px
+	margin-bottom -100px
+	z-index 2
+
+	.section-title
+		margin-bottom 10px
+
+	.section-special
+		title h2
+		font-family font_2
+		display inline-block
+		color color
+		position relative
+		padding 0 15px
+		margin 0 60px 10px
+		&:after
+		&:before
+			content ""
+			width 40px
+			height 2px
+			position absolute
+			top 50%
+			margin-top -2px
+			background color
+		&:after
+			right 100%
+		&:before
+			left 100%
+
+	.section-bg.bg.bg-loaded
+		animation scaleFadeIn2 10s ease-out
+	.section-bg-video
+		background dark
+
+
+.section-logos.section-expositors
+	padding-top 100px
+	a
+		@media $break-lg
+			max-width 200px
+			height 80px
+			line-height 80px - 2
+			img
+				max-height 80px
+

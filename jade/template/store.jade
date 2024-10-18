@@ -1,0 +1,65 @@
+
+extends ../template.jade
+
+block page
+
+	.page
+
+		.page-header
+			.page-header-bg.bg
+				img(src="uploads/7.jpg")
+			.page-header-limit
+				h1.page-header-title Tiendas
+
+
+	section.section-content
+		.section-limit
+			.cols.cols-gutterx2
+				.col-md-6
+					.section-image
+						+img(200,200)
+				.col-md-6
+					.section-content
+
+						h2.section-title: +lorem(5)
+						p.section-subtitle: +lorem(20)
+						.section-description.content
+							p: +lorem(40)
+						.section-buttons
+							a.button.button-lg(href="#") Ver sitio web
+
+
+
+
+
+	section.section-center
+		.section-limit
+
+			.section-content
+				h2 Otras tiendas
+
+			.cols.cols-gutterx2
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()
+				.col-xs-6.col-md-4.col-lg-3
+					+articleStore()

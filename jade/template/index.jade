@@ -1,0 +1,236 @@
+
+extends ../template.jade
+
+block page
+
+
+	h1.none=BRAND 
+
+
+	// Section main
+
+	section.section-main.section-dark.section-center
+		.section-bg.bg
+			+img("bg.jpg")
+		.section-bg-video(data-youtube="gc4OIZktlVE",data-youtube-auto="bg")
+		.section-limit
+			.section-content
+				h2.h1.section-title Feria expositora de videojuegos y tecnología
+				p.section-special Entrada liberada
+				p.section-subtitle: +lorem(20)
+				a.button.button-lg.button-line-white(href="#",data-goto=".section-logos") Conoce el evento
+
+
+
+	// Section logos
+
+	section.section-logos.section-expositors.section-color
+		.limi.inner.inner-2
+			h3 Nos apoyan grandes marcas
+			a(href="expositors.html"): +img("logo-msi.png")
+			a(href="expositors.html"): +img("logo-microplay.png")
+			a(href="expositors.html"): +img("logo-corsair.png")
+
+
+
+
+
+	// Section content
+
+
+	section.section-content
+		.section-limit
+			.cols.cols-gutterx2
+				.col-md-6
+					.section-video.youtube(data-youtube="9ZfN87gSjvI")
+						+img(200,200)
+						.youtube-play
+							span.fa.fa-play
+
+				.col-md-6
+					+sectionContent(true,true,true)
+
+
+
+	// Section articles
+
+	section.section-articles.section-center
+		//.section-bg.bg
+			+img("bg.jpg")
+		.section-limit
+
+			.section-content
+				h2.section-title Últimas noticias
+				p.section-subtitle: +lorem(20)
+
+			.cols
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+
+
+	//section.section-articles
+		.cols.cols-gutterx0
+			.col-lg-4
+				+articleBg("big")
+			.col-lg-4
+				+articleBg("big")
+			.col-lg-4
+				+articleBg("big")
+
+	//section.section-articles
+		.section-limit
+
+			.cols.cols-gutterx0
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+
+
+
+
+
+	// Section items: pages or categories
+
+
+
+	//section.section-items
+		.cols.cols-gutterx0
+			.col-sm-6.col-lg-4
+				+articleProp("4-3 article-prop-double")
+			.col-sm-6.col-lg-4
+				+articleProp("4-3")
+			.col-sm-6.col-lg-4
+				+articleProp("4-3")
+			.col-sm-6.col-lg-4
+				+articleProp("4-3")
+			.col-sm-6.col-lg-4
+				+articleProp("4-3")
+
+	//section.section-items
+		.section-limit
+
+			.cols
+				.col-sm-6.col-lg-4
+					+articleProp("4-3 article-prop-double-gutter")
+				.col-sm-6.col-lg-4
+					+articleProp("4-3")
+				.col-sm-6.col-lg-4
+					+articleProp("4-3")
+				.col-sm-6.col-lg-4
+					+articleProp("4-3")
+				.col-sm-6.col-lg-4
+					+articleProp("4-3")
+
+	//section.section-items
+		.section-limit
+
+			.cols
+				.col-sm-6.col-lg-3
+					+articleProp()
+				.col-sm-6.col-lg-3
+					+articleProp()
+				.col-sm-6.col-lg-3
+					+articleProp()
+				.col-sm-6.col-lg-3
+					+articleProp()
+				.col-sm-6.col-lg-3
+					+articleProp()
+				.col-sm-6.col-lg-3
+					+articleProp()
+				.col-sm-6.col-lg-3
+					+articleProp()
+				.col-sm-6.col-lg-3
+					+articleProp()
+
+	//section.section-items.section-color
+		.section-limit
+
+			.cols
+				.col-sm-6.col-lg-3
+					+articleProp("circle")
+				.col-sm-6.col-lg-3
+					+articleProp("circle")
+				.col-sm-6.col-lg-3
+					+articleProp("circle")
+				.col-sm-6.col-lg-3
+					+articleProp("circle")
+
+
+
+
+
+
+
+
+
+
+
+	// Section map
+
+	//
+		section.section-map.section-black
+
+		.section-limit
+			.section-map-box
+				h3 Technogames 2017
+				ul
+					li
+						span.fa.fa-home
+						| Avenida del Parque 4161, oficina 103, Ciudad Empresarial
+					li
+						a(href='tel:+56223935367')
+							span.fa.fa-phone
+							| +(56) 2 2393 5367
+					li
+						a(href='mailto:contacto@adsgdfg.com')
+							span.fa.fa-envelope
+							| contacto@adsgdfg.com
+
+		.section-map.map(data-zoom='14', data-lat='-33.0326091', data-lng='-71.5896207')
+			.map-marker(data-lat='-33.0326091', data-lng='-71.5896207')
+
+
+
+
+
+
+	// Section newsletter
+
+	//section.section-newsletter.section-color
+		.section-bg.bg(data-bg="uploads/"+Math.floor(Math.random()*9)+".jpg")
+		.section-limit
+			.section-content
+				h3.h2 Suscríbete a nuestro newsletter
+				p.subtitle: +lorem(10)
+				form.controls.validate
+					.cols
+						.col-xs-6.col-md-4
+							+control("text","Nombre")(placeholder="Nombre...")
+						.col-xs-6.col-md-4
+							+control("email","Nombre")(placeholder="Email...")
+						.col-xs-4
+							button.button.button-dark.button-big.button-block
+								//span.fa.fa-paper-plane
+								|  Enviar
+
+
+
+	// Section quote
+
+	//section.section-quote.section-color.section-center
+		.section-bg.bg: +img(800,400)
+		.section-limit
+			+sectionContent(true,true,false,'black')
+
+
+
+
+
+

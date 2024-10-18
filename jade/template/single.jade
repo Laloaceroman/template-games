@@ -1,0 +1,92 @@
+
+extends ../template.jade
+
+block page
+
+	.page
+
+		.page-header.page-header-offset
+			.page-header-bg.bg
+				img(src="uploads/7.jpg")
+			.page-header-limit
+				h1.page-header-title
+					+lorem(6)
+
+		.page-body
+			.limit.limit-2.inner.inner-2
+				.single
+
+					.single-content.content
+
+						p: +lorem(40)
+						p Ratione, <strong>obcaecati quia eligendi</strong> voluptatem perferendis amet suscipit ullam enim voluptatibus voluptas praesentium pariatur qui porro libero ipsum consectetur sapiente culpa aperiam omnis animi iusto magnam laboriosam. Ea consequuntur, alias.
+						p Excepturi inventore maiores, non repellendus quidem <a href="#">necessitatibus soluta</a> doloribus, dolorum velit explicabo a nobis, fugit natus molestiae placeat minus suscipit itaque commodi ex sit, aspernatur laudantium deserunt porro. Voluptate, ea.
+
+						p: img(src="uploads/7.jpg")
+
+						h2: +lorem(6)
+						blockquote
+							p: +lorem(40)
+						p: +lorem(40)
+						p: +lorem(40)
+
+						h3: +lorem(6)
+						p: +lorem(40)
+						
+						h4: +lorem(6)
+						p: +lorem(40)
+
+						iframe(width="560" height="315" src="https://www.youtube.com/embed/R7MTU_VVsnA" frameborder="0" allowfullscreen)
+
+						h5: +lorem(6)
+						p: +lorem(40)
+
+						.table-container
+							table
+								tr
+									th: +lorem(2)
+									th: +lorem(2)
+									th: +lorem(2)
+									th: +lorem(2)
+								tr
+									td: +lorem(3)
+									td: +lorem(3)
+									td: +lorem(3)
+									td: +lorem(3)
+								tr
+									td: +lorem(3)
+									td: +lorem(3)
+									td: +lorem(3)
+									td: +lorem(3)
+
+						p: +lorem(40)
+
+
+					.single-shares.shares
+						a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-facebook
+						a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-twitter
+						a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-whatsapp
+
+
+
+	// Section articles
+
+	section.section-articles.section-center
+		.section-limit
+
+			.section-content
+				h2 Más noticias
+
+			.cols
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()
+				.col-md-4
+					+articleBg()

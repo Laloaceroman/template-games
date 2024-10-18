@@ -1,0 +1,124 @@
+
+
+mixin article()
+
+	article.article-default
+
+		.article-image
+			+img(400,300)
+
+		.article-body
+			//.article-category: a(href="#") Hola
+			.article-date 24/23/223
+			h3.article-title: a(href="#",class='sss'): +lorem(5)
+			p.article-description: +lorem(10)
+			//.article-shares
+				a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-facebook
+				a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-twitter
+				a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-linkedin
+				a(href="http://loremipsum.com",data-text="Lorem ipsum",data-img="http://placeimg.com/400/600/any").share.share-pinterest
+				a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-googleplus
+				a(href="http://loremipsum.com",data-text="Lorem ipsum").share.share-whatsapp
+			.article-footer
+				a(href="#",class='sss').button.button-cover Leer más
+
+
+mixin articlePeople(link)
+
+	article.article-people
+		.article-image
+			.article-circle
+				.bg
+					+img(200,200)
+		.article-body
+			if !link
+				h3.h4.article-title: +lorem(3)
+				p.article-description: +lorem(10)
+			else
+				h3.h4.article-title: a(href="#",class='sss'): +lorem(3)
+				p.article-description: +lorem(10)
+				a(href="#",class='sss').button.button-cover Ver más
+
+			.article-social
+				a(href="#"): span.fa.fa-facebook
+				a(href="#"): span.fa.fa-twitter
+				a(href="#"): span.fa.fa-linkedin
+
+
+mixin articleMin()
+
+	article.article-min
+
+		.article-image
+			+img(200,200)
+
+		.article-body
+			.article-date 24/23/223
+			h3.article-title: a(href="#",class='sss'): +lorem(3)
+			p.article-description: +lorem(8)
+
+
+
+mixin articleBg(big)
+
+	article.article-bg(class="article-bg-#{big}")
+
+		.article-image.bg
+			+img(400,300)
+
+		.article-cover
+			.article-date 24/23/223
+			h3.article-title: a(href="single.html",class='sss'): +lorem(4)
+			p.article-description: +lorem(10)
+			a(href="single.html",class='sss').button.button-line-white.button-cover Leer más
+
+
+
+mixin articleGallery(option)
+
+	article.article-gallery
+
+		.article-bg.bg(data-bg="uploads/"+Math.floor(Math.random()*9)+".jpg")
+
+		if option=="video"
+			a.article-open(href="https://www.youtube.com/watch?v=Y6wGlaPXYFk",data-gallery="groupA")
+				.article-icon.article-icon-play
+					span.fa.fa-play
+		else
+			a.article-open(href="uploads/"+Math.floor(Math.random()*9)+".jpg",data-gallery="groupA")
+				.article-icon.article-icon-zoom
+					span.fa.fa-search-plus
+
+
+
+mixin articleProp(type)
+
+	article.article-prop(class="article-prop-#{type}")
+
+		.article-bg.bg
+			+img(400,300)
+
+		.article-deco
+			.article-deco-border
+
+		.article-body-va
+			.article-body
+				h3.article-title: a(href="#",class='sss'): +lorem(4)
+
+
+mixin articleStore() 
+
+	article.article-store
+
+		.article-image
+			a.bg(href="store.html")
+				img(src="img/logo.png")
+
+		.article-body
+			h3.h4.article-title: a(href="store.html"): +lorem(2)
+			p.article-description: +lorem(6)
+
+
+
+
+

@@ -1,0 +1,44 @@
+
+.page
+	
+	.page-header
+		padding-top header_height
+		margin-top header_height * -1
+		background url('../img/bg.jpg') center center no-repeat dark
+		background-size cover
+		position relative
+		color white
+		text-align center
+
+		.page-header-bg
+			&.bg.bg-loaded
+				opacity .2
+		
+		.page-header-limit
+			position relative
+			max-width limit_3
+			margin 0 auto
+			padding 40px 20px
+			@media $break-md
+				padding 60px 20px
+			&>*
+				margin-bottom 20px
+				animation slideFadeUp .5s ease backwards
+				animation-stagger 4, .05s, .5s
+				&:last-child
+					margin-bottom 0
+
+
+		&.page-header-offset
+			@media $break-sm
+				padding-bottom 60px
+				margin-bottom -100px
+			@media $break-md
+				margin-bottom -120px
+		
+	
+	.page-body
+		position relative
+
+	.page-filters
+		background white

@@ -1,0 +1,82 @@
+
+extends ../template.jade
+
+block page
+
+	.page
+
+		.page-header
+			.page-header-bg.bg
+				+img(1000,400)
+			.page-header-limit
+				h1.page-header-title Carro de compra
+
+		.page-body
+			.limit.limit-2.inner.inner-0.inner-2
+
+				.form.controls.validate.cart
+					.cols
+						.col-md-8
+
+							.cart-articles
+								+loop(3)
+									article.article-product-min(data-cart-product)
+										.article-image: a.bg(href="#"): +img(200,200)
+										.article-body
+											h3.h4.article-title: a(href="#"): +lorem(6)
+											p.article-description: +lorem(6)
+
+
+										.article-cart
+											//.article-addtocart
+												button.button Agregar al carro
+											.article-remove
+												span.fa.fa-times
+
+											.cols
+												.col-xs-4
+													.article-price
+														.article-label Precio
+														.article-value $2.000
+												.col-xs-4
+													.article-quantity(data-quantity)
+														.article-label Cantidad
+														.article-value
+															input(type="number",value="1",min="1",data-quantity-input)
+															.article-quantity-up(data-quantity-up): span.fa.fa-angle-right
+															.article-quantity-down(data-quantity-down): span.fa.fa-angle-left
+												.col-xs-4
+													.article-price.article-price-total
+														.article-label Total
+														.article-value $4.000
+
+
+						.col-md-4
+
+							.cart-box.cart-resume
+								h4.cart-resume-title Resumen
+								.cart-resume-section
+									+loop(3)
+										.cart-resume-item
+											.cart-resume-item-total x 2 $4.000
+											.cart-resume-item-title: +lorem(5)
+									.cart-resume-item
+										a(href="#") Agregar cupón
+
+								.cart-resume-section.cart-coupon
+									.cart-coupon-button
+										.button.button-light Agregar
+									.cart-coupon-input
+										input(type="text",placeholder="Código")
+
+								.cart-resume-section
+									.cart-resume-total Total: $14.000
+									a(href="cart-2.html").button.button-md.button-block Continuar
+
+
+
+
+
+
+
+

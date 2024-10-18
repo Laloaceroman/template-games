@@ -1,0 +1,82 @@
+
+extends ../template.jade
+
+block page
+
+	.page
+
+		.page-header
+			.page-header-bg.bg
+				+img(1000,400)
+			.page-header-limit
+				h1.page-header-title Carro de compra
+
+		.page-body
+			.limit.limit-2.inner.inner-0.inner-2
+
+				.form.controls.validate.cart
+
+					.cols
+						.col-md-8
+
+							.cart-box.center
+								h4 Ingresa o crea una cuenta
+								a(href="/").button.button-md.button-dark Ingresar
+								a(href="/").button.button-md Registrate
+
+							.cart-box
+								h4 Información
+								.cols
+									.col-sm-6
+										+control("text","name","Nombre")
+									.col-sm-6
+										+control("text","lastname","Apellido")
+								.cols
+									.col-sm-12
+										+control("text","name","Empresa")
+								.cols
+									.col-sm-6
+										+control("email","email","Email")
+									.col-sm-6
+										+control("text","phone","Teléfono")
+								.cols
+									.col-sm-12
+										+control("text","city","Ciudad")
+									.col-sm-12
+										+control("text","street","Dirección")&placeholder='dsadsda'
+									.col-sm-12
+										+control("textarea","commentary","Notas adicionales")
+
+							.cart-box
+								h4 Método de pago
+								label.cart-paymethod
+									input(type="radio",name="paymethod",value="transference",checked)
+									|  Transferencia bancaria
+								//label.cart-paymethod
+									input(type="radio",name="paymethod",value="transbank")
+									|  Transbank
+
+
+						.col-md-4
+
+							.cart-box.cart-resume
+								h4.cart-resume-title Resumen
+								.cart-resume-section
+									+loop(3)
+										.cart-resume-item
+											.cart-resume-item-total x 2 $4.000
+											.cart-resume-item-title: +lorem(5)
+									.cart-resume-item
+										a(href="#") Agregar cupón
+
+								.cart-resume-section.cart-coupon
+									.cart-coupon-button
+										.button.button-light Agregar
+									.cart-coupon-input
+										input(type="text",placeholder="Código")
+
+								.cart-resume-section
+									.cart-resume-total Total: $14.000
+									a(href="cart-3.html").button.button-md.button-block Pagar
+
+

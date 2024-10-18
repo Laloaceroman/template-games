@@ -1,0 +1,70 @@
+
+#body
+	animation fadeIn .5s .5s ease backwards
+	background global_bg url(../img/pattern.png) center center repeat
+
+
+
+// Background img
+.bg
+	cover absolute
+	background center center no-repeat
+	background-size cover
+	opacity 0
+	display block
+	&.bg-loaded
+		animation fadeIn .5s ease
+		opacity 1
+	img
+		display none
+
+.bg-video
+	cover absolute
+	animation fadeIn .5s .5s ease backwards
+
+
+.message
+	margin-bottom 20px
+	background lighter
+	radius rad_2
+	padding 20px 30px
+
+
+
+.subtitle
+	@media $break-md
+		font-weight 300
+		font-size 120%
+		line-height 140%
+	@media $break-lg
+		font-size 140%
+		line-height 160%
+
+
+.close
+	position absolute
+	top 10px
+	right 10px
+	circle 30px
+	background rgba(0,0,0,.5)
+	color white
+	@media $break-md
+		top 20px
+		right 20px
+		circle 50px
+	&:hover
+		background color
+
+.ii
+	text-transform none
+	transform-origin center 80%
+	transform scale(1,1.22)
+	display inline-block
+
+
+
+
+.grecaptcha-badge
+	display none !important
+
+

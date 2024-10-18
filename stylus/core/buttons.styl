@@ -1,0 +1,147 @@
+
+
+
+.button
+	font-family font
+	text-decoration none
+	display inline-block
+	border 2px solid transparent
+	width auto
+	transition tn
+	text-align center
+	margin 0 5px
+	vertical-align middle
+	radius button_radius
+	background color
+	color black
+	font-size button_size
+	line-height button_lineheight
+	tap 0
+	if button_uppercase
+		text-transform uppercase
+	if button_letterspacing
+		letter-spacing button_letterspacing
+
+	&:first-child
+		margin-left 0
+	&:last-child
+		margin-right 0
+
+
+	// Sizes	
+	padding button_padding
+
+	&.button-small
+	&.button-xs
+		padding button_padding[0] - button_padding_a[0] button_padding[1]
+	
+	&.button-medium
+	&.button-md
+		padding button_padding[0] + button_padding_a[0] button_padding[1] + button_padding_a[1]
+	
+	&.button-big
+	&.button-lg
+		padding button_padding[0] + button_padding_a[0] button_padding[1] + button_padding_a[1]
+		@media $break-md
+			padding button_padding[0] + button_padding_a[0]*2 button_padding[1] + button_padding_a[1]*2
+
+
+	// Styles
+
+	&.button-white
+		background white
+		color dark
+
+	&.button-lighter
+		background lighter
+		color dark
+
+	&.button-light
+		background light
+		color dark
+
+	&.button-gray
+		background gray
+		color white
+
+	&.button-dark
+		color white
+		background dark
+
+	&.button-black
+		color white
+		background black
+	
+	&.button-line
+		border-color light
+		background transparent
+		color dark
+
+	&.button-line-white
+		border-color white
+		background transparent
+		color white
+
+	&.button-disabled
+	&[disabled]
+		background light
+		border-color light
+		color white
+		&:hover
+			background light
+			border-color light
+			color white
+			cursor default
+
+
+	// Standar hover
+
+	&:hover
+		border-color color
+		background color
+		color dark
+		text-decoration none
+		cursor pointer
+		&.button-color
+			border-color lighten(color,10%)
+			background lighten(color,10%)
+
+
+	// Hover color 2
+
+	&.button-color-2
+		background color_2
+		color dark
+
+	&.button-color-2
+	&.button-hover-2
+		&:hover
+			border-color lighten(color_2,10%)
+			background lighten(color_2,10%)
+			color dark
+
+
+	// Others
+
+	&.button-block
+		display block
+		padding-right 5px
+		padding-left 5px
+		width 100%
+		
+	&.button-cover
+		&:after
+			content ""
+			cover absolute
+
+
+	.fa
+		&.fa-angle-right
+		&.fa-chevron-right
+			margin-left 10px
+		&.fa-angle-left
+		&.fa-chevron-left
+			margin-right 10px
+
+
+

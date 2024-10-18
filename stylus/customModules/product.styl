@@ -1,0 +1,40 @@
+
+
+.product
+	.product-slider
+		&.slider
+			proportion 4,3
+			background white
+			.slider-slides
+				cover absolute
+				.slide
+					height 100%
+					&.slide-dark
+						background dark
+				.bg
+					background-size contain
+			.slider-bullets
+				.slider-bullet
+					background gray
+
+			@media $break-md
+				.slider-nav
+						opacity 0
+				&:hover
+					.slider-nav
+						opacity 1
+
+
+	.product-content
+		margin-bottom 20px
+
+	.product-price
+		margin-bottom 15px
+		title h3
+		.product-price-new
+		.product-price-old
+			display inline-block
+		.product-price-old
+			margin-left 10px
+			opacity .25
+			text-decoration line-through 

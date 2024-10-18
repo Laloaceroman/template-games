@@ -1,0 +1,474 @@
+
+
+article
+	position relative
+	overflow hidden
+	background-color white
+	color dark
+	margin-bottom 20px
+	animation fadeIn .5s ease
+	&:last-child
+		margin-bottom 0
+	
+	.article-image
+		background-color light
+		position relative
+		img
+			width 100%
+			opacity 0
+	&.article-loaded
+		.article-image
+			img
+				opacity 1
+				animation fadeIn .5s ease
+
+	.article-body
+		padding sep
+
+	.article-cover
+		position absolute
+		width 100%
+		left 0
+		bottom 0
+		padding sep
+
+	.article-title
+		a
+			display block
+			&:after
+				content ""
+				cover absolute
+	
+	.article-title
+		margin-bottom 10px
+		&:last-child
+			margin-bottom 0
+	.article-description
+		margin-bottom 20px
+		&:last-child
+			margin-bottom 0
+
+	.article-category
+		margin-bottom 5px
+		a
+			position relative
+			z-index 2
+			display inline-block
+			padding 2px 10px
+			background color
+			color white
+
+	.article-date
+		opacity .5
+		margin-bottom 10px
+		font-size 90%
+		letter-spacing 2px
+	
+	.article-shares
+		a
+			position relative
+			z-index 2
+			display inline-block
+			circle 30px
+			margin-right 2px
+			padding 0
+
+
+	&.article-default
+		radius rad
+		.article-body
+			border 1px solid lighter
+			radius 0 0 rad rad
+			@media $break-md
+				min-height 250px
+		.article-title a
+			color black
+		&:hover
+			.article-title a
+				color color
+
+
+	&.article-min
+		margin-bottom 1px
+		padding 10px
+		&:last-child
+			margin-bottom 0
+		.article-body
+			overflow hidden
+			padding 0
+		.article-title
+			title h4
+			margin-bottom 5px
+		.article-title a
+			color dark
+		.article-image
+			float left
+			width 100px
+			margin-right 10px
+			@media $break-md
+				width 140px
+		&:hover
+			.article-title a
+				color color
+
+
+	&.article-bg
+		color white
+		background dark
+		height 260px
+		text-align left
+		clip-path polygon(10% 0%, 100% 0%, 100% 90%,90% 100%, 0% 100%, 0% 10%)
+
+		@media $break-sm
+			height 340px
+		@media $break-md
+			height 420px
+		.article-cover
+			@media $break-lg
+				padding 30px
+		.article-image
+			cover absolute
+			opacity .2
+			transition .4s ease
+			// grad-shadow 200px 100px black
+		&:hover
+			.article-image
+				opacity .4
+		.article-title
+			a
+				color white
+		.button
+			margin 0
+			&:after
+				top auto
+				bottom 0
+				height 600px
+
+		&.article-bg-big
+			@media $break-lg
+				height 600px
+				.article-cover
+					padding sep*2
+	
+
+	&.article-people
+		max-width 300px
+		margin 0 10px 20px
+		display inline-block
+		vertical-align top
+		background transparent
+		animation slideFadeUp .5s ease backwards
+		animation-stagger 6, .1s
+		&:last-child
+			margin-bottom 0
+		.article-image
+			background transparent
+			max-width 200px
+			margin 0 auto 10px
+			border 1px solid light
+			padding 5px
+			radius 50%
+			.article-circle
+				position relative
+				radius 50%
+				proportion 1,1
+				overflow hidden
+				z-index 1
+				background lighter
+		.article-body
+			padding 0
+		.article-social
+			a
+				display inline-block
+				circle 30px, 1
+				background color
+				color white
+				margin 2px
+				.fa
+					vertical-align middle
+
+
+
+
+	&.article-gallery
+		background lighter
+		z-index 1
+		height 160px
+		@media $break-sm
+			height 250px
+
+		.article-open
+			display block
+			cover absolute
+			transition .4s ease
+
+		.article-icon
+			centrecircle 50px
+			background white
+			font-size 120%
+			transition .4s ease
+			opacity 0
+			.fa.fa-play
+				margin-left 5px
+			&.article-icon-play
+				opacity 1
+
+		&:hover
+			.article-open
+				background rgba(dark,80%)
+				.article-icon
+					opacity 1
+
+
+
+
+
+	&.article-prop
+		color white
+		background dark
+		position relative
+		transition .4s ease
+		proportion 1,1
+		overflow hidden
+
+		.article-bg
+			cover absolute
+			transition .4s ease
+			opacity .6
+
+		.article-deco
+			cover absolute
+			border 15px solid transparent
+			opacity 0
+			transition .4s ease
+			.article-deco-border
+				cover absolute
+				border 2px solid color
+
+		.article-body-va
+			cover absolute
+			text-align center
+			top 50%
+			height 300px
+			line-height 300px
+			margin-top (@height/-2)
+			.article-body
+				display inline-block
+				vertical-align middle
+				line-height global_lh
+				@media $break-sm
+					padding 20px 30px
+
+		.article-title a
+			color white
+
+		&:hover
+			.article-bg
+				opacity .2
+			.article-deco
+				opacity 1
+		
+		&.article-prop-4-3
+			proportion 4,3
+			@media $break-sm
+				&.article-prop-double
+					proportion 4,6
+				&.article-prop-double-gutter
+					proportion 4,6
+					padding-top 20px
+
+
+		&.article-prop-circle
+			radius 50%
+			.article-bg
+				radius 50%
+			.article-deco
+				.article-deco-border
+					radius 50%
+
+
+
+
+
+
+
+
+	&.article-product
+		padding 20px
+		text-align center
+
+		.article-image
+			position relative
+			margin-bottom 10px
+			proportion 1,1
+			background white
+			.bg
+				background-size contain
+
+		.article-body
+			padding 0
+
+		.article-title
+			margin-bottom 0
+			padding 4px 0
+			text-transform none
+			font-weight normal
+			a
+				color dark
+				text-overflow ellipsis
+				&:hover
+					color color
+
+		.article-description
+			color gray
+			text-overflow ellipsis
+
+		.article-price
+			margin-bottom 15px
+			title h4
+			.article-price-new
+			.article-price-old
+				display inline-block
+			.article-price-old
+				margin-left 5px
+				opacity .25
+				text-decoration line-through 
+
+		.article-button
+			position relative
+			z-index 2
+
+
+
+
+
+
+
+	&.article-product-min
+		padding 15px
+		@media $break-sm
+			padding 20px
+
+		.article-image
+			float left
+			width 50px
+			height @width
+			position relative
+			margin-right 15px
+			@media $break-sm
+				width 120px
+				height @width
+				margin-right 20px
+
+		.article-body
+			overflow hidden
+			padding 0
+
+		.article-title
+			margin-bottom 0
+			padding 4px 0
+			a:after
+				display none
+
+		.article-title a
+		.article-description
+			text-overflow ellipsis
+
+		.article-cart
+			clear both
+			margin 15px -15px 0
+			padding 10px 15px 0
+			overflow hidden
+			text-align center
+			border-top 1px solid lighter
+			@media $break-sm
+				clear none
+				margin 20px 0 0
+				padding 10px 0 0
+
+		.article-label
+			text-transform uppercase
+			font-size 10px
+			letter-spacing 1px
+			opacity .5
+			position relative
+
+		.article-value
+			overflow hidden
+			position relative
+
+		.article-price
+			position relative
+			.article-value
+				title h4
+		
+		.article-quantity
+			position relative
+			max-width 100px
+			margin 0 auto
+			.article-value
+				margin -5px 0
+			input
+				display inline-block
+				padding 5px 10px
+				width 100%
+				text-align center
+				background transparent
+				border 0
+			.article-quantity-up
+			.article-quantity-down
+				padding 5px 10px
+				position absolute
+				top 0
+				width 30px
+				text-align center
+				opacity .5
+				&:hover
+					cursor pointer
+					opacity 1
+			.article-quantity-down
+				left 0
+			.article-quantity-up
+				right 0
+
+		.article-remove
+			position absolute
+			top 0
+			right 0
+			padding 10px 12px
+			opacity .5
+			transition tn
+		
+
+		@media $break-md
+			.article-remove
+				opacity 0
+			&:hover
+				.article-remove
+					cursor pointer
+					opacity .5
+					&:hover
+						opacity 1
+
+
+
+	&.article-store
+		box-shadow 0 0 20px rgba(0,0,0,.1)
+		padding 20px 20px 0
+		.article-image
+			position relative
+			background transparent
+			proportion 4,3
+			margin-bottom 20px
+			.bg
+				background-size contain
+		.article-body
+			border-top 1px solid lighter
+			height 120px
+			padding 20px
+			margin 0 -20px
+		.article-title
+			a
+				color dark
+
+

@@ -1,0 +1,91 @@
+
+.cart
+	overflow hidden
+
+	.cart-articles
+		margin 10px
+		@media $break-sm
+			margin 0 0 10px
+		article
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+
+	.cart-box
+		background white
+		margin-bottom 10px
+		padding 20px
+		@media $break-md
+			padding 30px
+		&:last-child
+			margin-bottom 0
+
+
+
+	.cart-resume
+
+		.cart-resume-title
+			margin-bottom 15px
+
+		.cart-resume-section
+			border-bottom 1px solid lighter
+			padding-bottom 15px
+			margin-bottom 15px
+			&:last-child
+				border 0
+				padding 0
+				margin 0
+
+		.cart-resume-item
+			margin-bottom 5px
+			&:last-child
+				margin-bottom 0
+			.cart-resume-item-title
+				text-overflow ellipsis
+			.cart-resume-item-total
+				float right
+				margin-left 5px
+			a:hover
+				text-decoration underline
+
+		.cart-resume-total
+			title h4
+			text-align right
+			margin-bottom 15px
+
+		.cart-resume-subtitle
+			text-transform uppercase
+			letter-spacing 1px
+			font-size 80%
+			margin-bottom 5px
+
+
+		.button
+			margin 0
+
+
+
+	.cart-coupon
+		position relative
+		max-width 400px
+		display none
+		animation fadeIn .5s ease
+		input
+			margin-right 100px
+		.button
+			margin 2px 0
+		.cart-coupon-button
+			float right
+			margin-left 10px
+		.cart-coupon-input
+			overflow hidden
+
+
+
+	.cart-paymethod
+		display inline-block
+		margin-right 20px
+
+
+
+

@@ -1,0 +1,262 @@
+
+
+header
+	top 0
+	width 100%
+	z-index 10
+	position relative
+	height header_height
+	background header_background
+	text-transform uppercase
+	font-family font_2
+	transition .2s ease
+	&:before
+		content ""
+		position absolute
+		bottom 0
+		left 0
+		width 100%
+		height 2px
+		transition .2s
+	@media $break-md
+		position fixed
+	
+	
+	&.header-transparent
+		background transparent
+		&:before
+			background rgba(255,255,255,.05)
+
+
+	a
+		color header_color
+
+
+	.header-limit
+		max-width limit
+		margin 0 auto
+		position relative
+		overflow hidden
+
+	.header-logo
+		display block
+		margin 0 auto
+		width 180px
+		a
+			display block
+			height header_height
+			line-height header_height - 2 // 2 = fix line-height for vertical align middle element
+			text-align center
+			img
+				display inline-block
+				vertical-align middle
+				max-height header_height - 35
+				width auto
+				height auto
+
+
+	.header-social
+		line-height header_height - 2
+		display none
+		margin-left 20px
+		@media $break-sm
+			display block
+			float left
+		@media $break-lg
+			float right
+		a
+			circle 40px, 2px
+			border 2px solid color
+			color white
+			display inline-block
+			margin 0 1px
+			vertical-align middle
+			&:hover
+				background color
+				color black
+
+
+	.header-nav
+		position fixed
+		top 0
+		right 0
+		width 260px
+		height 100%
+		background black
+		z-index 5
+		overflow hidden
+		display none
+		font-size 120%
+		&.in
+			display block
+			animation slideLeft .5s cb backwards
+		&.out
+			display block
+			animation slideRightOut .5s cb forwards
+
+		@media $break-lg
+			display block
+			position relative
+			width auto
+			height auto
+			overflow visible
+			background none
+		
+		.header-nav-back
+			@media $break-lg
+				display none
+
+		ul
+			li
+				border-bottom 1px solid rgba(255,255,255,.1)
+				@media $break-lg
+					border-bottom 0
+					display inline-block
+					position relative
+					float left
+					&:nth-last-child(1)
+					&:nth-last-child(2)
+						float right
+					&:hover
+						>ul
+							display block
+				a
+					padding ((header_height - global_lh) / 2) 20px
+					display block
+					color header_color
+					position relative
+					//@media $break-limit
+					//	padding ((header_height - global_lh) / 2) 30px
+					&:after
+						content ""
+						position absolute
+						bottom 0
+						left 0
+						height 2px
+						width 0%
+						background color
+						transition .2s ease
+					@media $break-lg
+						&:hover
+						&.current
+							&:after
+								width 100%
+
+					.fa
+						opacity .5
+						padding 2px 0
+						&.fa-angle-left
+							float left
+							margin-right 10px
+						&.fa-angle-right
+							float right
+							margin-left 10px
+				ul
+					background dark
+					position absolute
+					top 0
+					left 0
+					width 100%
+					height 100%
+					display none
+					animation fadeIn .2s ease backwards
+					@media $break-lg
+						top 100%
+						left 50%
+						width 200px
+						margin-left (@width / -2)
+						height auto
+						padding 10px 0
+					&.in
+						display block
+						animation slideLeft .5s cb backwards
+					&.out
+						display block
+						animation slideRightOut .5s cb forwards
+
+					li
+						display block
+						@media $break-lg
+							position static
+						a
+							color white
+							&:hover
+								background rgba(255,255,255,.1)
+							@media $break-lg
+								padding 15px 20px
+						ul
+							@media $break-lg
+								top 0
+								left 100%
+
+
+	.header-hamburger
+		position fixed
+		top 25px
+		right 10px
+		width 40px
+		height @width
+		line-height @width
+		z-index 6
+		text-align center
+		background color
+		color black
+		radius button_radius
+		@media $break-md
+			right 25px
+		@media $break-lg
+			display none
+
+	.header-menu-button
+		z-index 2
+		position fixed
+		top 0
+		right 0
+		background dark
+		display block
+		@media $break-md
+			display none
+	
+	.header-menu
+		z-index 1
+		position fixed
+		top 0
+		right 0
+		height 100%
+		overflow hidden
+		@media $break-lg
+			display none
+
+		.header-menu-inner
+			background dark
+			height 100%
+			width 320px
+			position relative
+			max-width 100%
+			margin 0 0 0 auto
+
+		.secretmenu-lvl
+			background dark
+
+		.header-menu-content
+			ul
+				li
+					a
+						padding 20px
+						display block
+						color white
+						border-bottom 1px solid rgba(255,255,255,.1)
+					ul
+						display none
+						display block
+						cover absolute
+						overflow auto
+						opacity .5
+						display none
+
+
+
+#body
+	@media $break-md
+		padding-top header_height
+
